@@ -1,63 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nested List in HTML</title>
-    <style>
-        h2 {
-            text-align: center;
-            color: teal;
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suryansh Patani | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #1E1E1E;
+      font-family: 'Segoe UI', sans-serif;
+      color: #FFFFFF;
+    }
+    .secondary-text {
+      color: #D1D1D1;
+    }
+    .accent {
+      background-color: #FF8C00;
+      color: white;
+    }
+    .accent-border {
+      border-color: #FF8C00;
+    }
+    .accent-hover:hover {
+      background-color: #e67600;
+    }
+  </style>
 </head>
 <body>
 
-    <h2>Nested List in HTML</h2>
+  <!-- Navbar -->
+  <header class="flex justify-between items-center p-6 sticky top-0 bg-[#1E1E1E] z-50">
+    <div class="text-xl font-bold">Suryansh Patani</div>
+    <nav class="space-x-6 text-sm font-medium secondary-text">
+      <a href="#home" class="hover:text-[#FF8C00]">Home</a>
+      <a href="#about" class="hover:text-[#FF8C00]">About Me</a>
+      <a href="#services" class="hover:text-[#FF8C00]">Services</a>
+      <a href="#projects" class="hover:text-[#FF8C00]">Projects</a>
+      <a href="#testimonials" class="hover:text-[#FF8C00]">Testimonials</a>
+      <a href="#contact" class="hover:text-[#FF8C00]">Contact</a>
+      <a href="#contact" class="px-4 py-2 rounded accent accent-hover">Download CV</a>
+    </nav>
+  </header>
 
-    <ol>
-        <li><font color = "blue">Input Devices</font>
-            <ol type="a">
-                <li><font color = "orange">Pointing Devices</font>
-                    <ul>
-                        <li><font color = "purple">Mouse</font>
-                            <ul>
-                                <li><font color = "green">Optical Mouse</font></li>
-                                <li><font color = "green">Mechanical Mouse</font></li>
-                                <li><font color = "green">Wireless Mouse</font>
-                                    <ul>
-                                        <li><font color = "dark yellow">RF Mouse</font></li>
-                                        <li><font color = "dark yellow">Bluetooth Mouse</font></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><font color = "purple">Trackball</font></li>
-                        <li><font color = "purple">Touchpad</font></li>
-                        <li><font color = "purple">Pointing Stick</font></li>
-                    </ul>
-                </li>
-                <li><font color = "orange">Touch Screen</font></li>
-                <li><font color = "orange">Video Input & Audio Input Devices</font>
-                    <ul>
-                        <li><font color = "purple">Digital Video Camera</font></li>
-                        <li><font color = "purple">Web Cams</font></li>
-                    </ul>
-                </li>
-            </ol>
-        </li>
-        <li><font color = "blue">Output Devices</font>
-            <ol type="a">
-                <li><font color = "orange">Printers</font>
-                    <ul>
-                        <li><font color = "purple">Impact Printer</font></li>
-                        <li><font color = "purple">Non-Impact Printer</font></li>
-                    </ul>
-                </li>
-            </ol>
-        </li>
-    </ol>
+  <!-- Home Section -->
+  <section id="home" class="flex flex-col md:flex-row justify-center items-center gap-12 min-h-screen px-8">
+    <div class="text-center md:text-left">
+      <p class="text-sm mb-2 secondary-text">Hi I am</p>
+      <h1 class="text-4xl font-bold" style="color: #FF8C00;">Suryansh Patani</h1>
+      <h2 class="text-5xl font-extrabold mt-2 leading-tight">UI & UX<br>Designer</h2>
+      <p class="mt-4 secondary-text max-w-md">
+        Crafting beautiful and functional designs that enhance user experience and solve real-world problems.
+      </p>
+      <a href="#contact" class="inline-block mt-6 px-6 py-3 rounded accent accent-hover">Hire Me</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="relative">
+        <img src="https://via.placeholder.com/250" alt="Suryansh" class="rounded-full border-4 accent-border w-60 h-60 object-cover" />
+      </div>
+      <div class="flex gap-4 mt-4 text-white text-xl">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="flex flex-col md:flex-row justify-center items-center gap-12 px-8 py-20">
+    <div>
+      <img src="https://via.placeholder.com/250" alt="Suryansh" class="rounded-full border-4 accent-border w-60 h-60 object-cover" />
+    </div>
+    <div class="max-w-lg">
+      <h2 class="text-4xl font-bold mb-4">About Me</h2>
+      <p class="secondary-text mb-6">
+        I’m a passionate UI & UX Designer with over 3 years of experience crafting engaging interfaces for startups and brands. I believe in blending creativity with usability, making designs that not only look good but also feel intuitive and natural to use.
+      </p>
+      <div class="space-y-4">
+        <div>
+          <p class="mb-1">UX</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="accent h-2.5 rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">Website Design</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="accent h-2.5 rounded-full" style="width: 85%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">App Design</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="accent h-2.5 rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">Graphic Design</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="accent h-2.5 rounded-full" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-8 text-center">
+    <h2 class="text-4xl font-bold mb-8">Services</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg w-64 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2" style="color: #FF8C00;">UI/UX Design</h3>
+        <p class="secondary-text text-sm">
+          Designing clean, modern and user-friendly interfaces for web and mobile applications.
+        </p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg w-64 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2" style="color: #FF8C00;">Website Design</h3>
+        <p class="secondary-text text-sm">
+          Building responsive websites that are aesthetically beautiful and function seamlessly.
+        </p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg w-64 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2" style="color: #FF8C00;">Graphic Design</h3>
+        <p class="secondary-text text-sm">
+          Crafting logos, social media creatives, banners, and promotional materials.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-8 text-center">
+    <h2 class="text-4xl font-bold mb-8">Projects</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg w-72 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" class="rounded mb-4" />
+        <h3 class="text-xl font-bold mb-2">Real Estate Website</h3>
+        <p class="secondary-text text-sm">Designed an intuitive platform to explore, filter, and purchase properties online.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg w-72 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" class="rounded mb-4" />
+        <h3 class="text-xl font-bold mb-2">Electricity Management App</h3>
+        <p class="secondary-text text-sm">A mobile app that tracks and reduces electricity consumption through smart insights.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg w-72 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" class="rounded mb-4" />
+        <h3 class="text-xl font-bold mb-2">Laundry Management App</h3>
+        <p class="secondary-text text-sm">Streamlined laundry operations for residential complexes and laundromats.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 px-8 text-center">
+    <h2 class="text-4xl font-bold mb-8">Testimonials</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg w-80 shadow-lg">
+        <p class="secondary-text text-sm italic">"Working with Suryansh was a game-changer. His design sense and communication are top-notch."</p>
+        <h4 class="mt-4 font-bold" style="color: #FF8C00;">— Sarah Wilson, CEO at BrightLabs</h4>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg w-80 shadow-lg">
+        <p class="secondary-text text-sm italic">"Highly recommend! Suryansh understands user behavior and delivers beautiful UI/UX."</p>
+        <h4 class="mt-4 font-bold" style="color: #FF8C00;">— Mike Thomson, Founder at FlexiApps</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-8 text-center">
+    <h2 class="text-4xl font-bold mb-8">Contact</h2>
+    <p class="secondary-text mb-6">Got a project idea or collaboration? Let's connect!</p>
+    <form class="max-w-md mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded bg-gray-700 text-white" required>
+      <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded bg-gray-700 text-white" required>
+      <textarea placeholder="Your Message" class="w-full px-4 py-3 rounded bg-gray-700 text-white" rows="4" required></textarea>
+      <button type="submit" class="w-full accent accent-hover px-6 py-3 rounded text-white font-semibold">Send Message</button>
+    </form>
+  </section>
 
 </body>
 </html>
