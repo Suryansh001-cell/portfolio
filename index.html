@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,10 +17,9 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="download-cv">Download CV</a></li>
             </ul>
-            <a href="#" class="download-cv">Download CV</a>
         </nav>
     </header>
 
@@ -33,7 +32,7 @@
                 <button class="hire-me">Hire Me</button>
             </div>
             <div class="hero-image">
-                <img src="profile-image.jpg" alt="Suryansh Patani">
+                <img src="profile-image.png" alt="Suryansh Patani">
             </div>
             <div class="social-links">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -47,11 +46,11 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="profile-image.jpg" alt="Suryansh Patani">
+                    <img src="profile-image.png" alt="Suryansh Patani">
                 </div>
                 <div class="skills">
                     <p>Hello there! My name is Suryansh Patani.</p>
-                    <p>I am a UI Designer. I love challenging problems where I can explore myself and my design.</p>
+                    <p>I am a UX Designer. I love challenging problems where I can explore myself and my design.</p>
                     <div class="skill-bars">
                         <div class="skill">
                             <span>UX</span>
@@ -100,21 +99,21 @@
             <h2>My Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="real-estate.jpg" alt="Real Estate Website">
+                    <img src="Frame 28.png" alt="Real Estate Website">
                     <div class="project-info">
                         <span class="project-type">Web Design</span>
                         <h3>Transforming Real Estate Website</h3>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="electricity.jpg" alt="Electricity Management App">
+                    <img src="phone.png" alt="Electricity Management App">
                     <div class="project-info">
                         <span class="project-type">App Design</span>
                         <h3>Electricity Management App</h3>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="laundry.jpg" alt="Laundry Management App">
+                    <img src="hbgb.png" alt="Laundry Management App">
                     <div class="project-info">
                         <span class="project-type">App Design</span>
                         <h3>Laundry Management App</h3>
@@ -132,5 +131,42 @@
             </form>
         </section>
     </main>
+    <script>
+        // Get all sections and nav links
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        // Function to update active link
+        function updateActiveLink() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - sectionHeight/3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Add scroll event listener with throttling
+        let isScrolling;
+        window.addEventListener('scroll', function() {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(function() {
+                updateActiveLink();
+            }, 50);
+        });
+
+        // Initial check
+        updateActiveLink();
+    </script>
 </body>
 </html>

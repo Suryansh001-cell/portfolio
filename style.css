@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
     color: #FFFFFF;
     line-height: 1.6;
@@ -32,20 +32,38 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    gap: 2rem;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 3rem;
+    margin: 0;
 }
 
 nav a {
     color: #FFFFFF;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a.active {
+    color: var(--primary-color);
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: -4px;
+    left: 0;
 }
 
 .download-cv {
@@ -72,6 +90,7 @@ nav a {
 .greeting {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 h1 {
@@ -81,7 +100,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -100,13 +119,15 @@ h2 {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .hero-image img {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     border: 4px solid var(--primary-color);
+    background-color: white;
 }
 
 .social-links {
@@ -138,6 +159,16 @@ h2 {
     align-items: center;
 }
 
+.about-image {
+    background-color: white;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .about-image img {
     width: 300px;
     height: 300px;
@@ -150,7 +181,7 @@ h2 {
 }
 
 .skill-bars {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .skill {
@@ -222,15 +253,17 @@ h2 {
 }
 
 .project-card {
-    background-color: #FFF1E6;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     overflow: hidden;
 }
 
 .project-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: white;
+    display: block;
+    border-radius: 8px 8px 8px 8px;
 }
 
 .project-info {
@@ -243,7 +276,7 @@ h2 {
 }
 
 .project-info h3 {
-    color: var(--text-color);
+    color: #FFFFFF;
     margin-top: 0.5rem;
 }
 
